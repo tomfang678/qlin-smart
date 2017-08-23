@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="qlin-smart-web:war">
+    <output-path>$PROJECT_DIR$/qlin-smart-web/target</output-path>
+    <root id="archive" name="qlin-smart-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="qlin-smart-web:war exploded" />
+    </root>
+  </artifact>
+</component>

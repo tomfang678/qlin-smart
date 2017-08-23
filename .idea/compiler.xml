@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="qlin-smart-api" />
+        <module name="qlin-smart-bean" />
+        <module name="qlin-smart-common" />
+        <module name="qlin-smart-dao" />
+        <module name="qlin-smart-server" />
+        <module name="qlin-smart-service" />
+        <module name="qlin-smart-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="qlin-smart" target="1.5" />
+      <module name="qlin-smart-api" target="1.5" />
+      <module name="qlin-smart-bean" target="1.5" />
+      <module name="qlin-smart-common" target="1.5" />
+      <module name="qlin-smart-dao" target="1.5" />
+      <module name="qlin-smart-server" target="1.5" />
+      <module name="qlin-smart-service" target="1.5" />
+      <module name="qlin-smart-web" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

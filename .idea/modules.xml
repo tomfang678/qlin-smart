@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/qlin-smart.iml" filepath="$PROJECT_DIR$/qlin-smart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qlin-smart-api/qlin-smart-api.iml" filepath="$PROJECT_DIR$/qlin-smart-api/qlin-smart-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qlin-smart-bean/qlin-smart-bean.iml" filepath="$PROJECT_DIR$/qlin-smart-bean/qlin-smart-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qlin-smart-common/qlin-smart-common.iml" filepath="$PROJECT_DIR$/qlin-smart-common/qlin-smart-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qlin-smart-dao/qlin-smart-dao.iml" filepath="$PROJECT_DIR$/qlin-smart-dao/qlin-smart-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qlin-smart-server/qlin-smart-server.iml" filepath="$PROJECT_DIR$/qlin-smart-server/qlin-smart-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qlin-smart-service/qlin-smart-service.iml" filepath="$PROJECT_DIR$/qlin-smart-service/qlin-smart-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qlin-smart-web/qlin-smart-web.iml" filepath="$PROJECT_DIR$/qlin-smart-web/qlin-smart-web.iml" />
+    </modules>
+  </component>
+</project>
