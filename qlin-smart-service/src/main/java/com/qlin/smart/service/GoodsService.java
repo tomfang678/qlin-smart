@@ -2,6 +2,7 @@ package com.qlin.smart.service;
 
 import com.qlin.smart.api.IGoods;
 import com.qlin.smart.bean.Goods;
+import com.qlin.smart.bean.SearchBean;
 import com.qlin.smart.dao.IGoodsMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,7 @@ public class GoodsService implements IGoods {
     }
 
     @Override
-    public List<Goods> getList() {
+    public List<Goods> getList(SearchBean searchBean) {
         return null;
     }
 

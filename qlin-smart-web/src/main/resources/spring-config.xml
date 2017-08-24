@@ -18,7 +18,7 @@
             <list>
                 <value>classpath:jdbc.properties</value>
                 <value>classpath:app.properties</value>
-                <value>classpath:dubbo.properties</value>
+              <!--  <value>classpath:dubbo.properties</value>-->
             </list>
         </property>
         <property name="ignoreResourceNotFound" value="true"/>
@@ -26,7 +26,7 @@
 
     <import resource="classpath:dataSource/datasource.xml"/>
     <import resource="classpath:mybatis/mybatis-spring.xml"/>
-    <import resource="classpath:dubbo/spring-dubbo-server.xml"/>
-    <import resource="classpath:dubbo/spring-dubbo-client.xml"/>
+   <!-- <import resource="classpath:dubbo/spring-dubbo-server.xml"/>
+    <import resource="classpath:dubbo/spring-dubbo-client.xml"/>-->
     <import resource="classpath:transaction/applicationContext-transaction.xml"/>
 </beans>
