@@ -235,6 +235,24 @@
             <artifactId>jackson-core-asl</artifactId>
             <version>1.9.13</version>
         </dependency>
+        <!-- mq -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>${activemq-version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>proton-jms</artifactId>
+                    <groupId>org.apache.qpid</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-pool</artifactId>
+            <version>${activemq-version}</version>
+        </dependency>
+        <!-- mq end -->
     </dependencies>
 
 

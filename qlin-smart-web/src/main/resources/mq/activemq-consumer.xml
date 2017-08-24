@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress ALL -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 消费者声明 -->
+    <bean id="wmsB2cExceptionQueueConsumer" class="com.mtsbw.ma.wms.newErp.service.consumer.B2cExceptionConsumer"/>
+    <!-- 队列侦听容器声明-->
+    <bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="wmsActivemqFactory"/>
+        <property name="destination" ref="wmsB2cExceptionDestination"/>
+        <property name="messageListener" ref="wmsB2cExceptionQueueConsumer"/>
+        <property name="taskExecutor" ref="myRegisterMessageExecutor"/>
+        <property name="sessionTransacted" value="true"/>
+        <property name="concurrentConsumers" value="${wms.b2c.exception.queue.concurrentConsumers}"/>
+        <property name="maxConcurrentConsumers" value="${wms.b2c.exception.queue.maxConcurrentConsumers}"/>
+    </bean>
+
+</beans>

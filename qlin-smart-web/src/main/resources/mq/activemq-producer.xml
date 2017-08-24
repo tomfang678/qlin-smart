@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 队列声明 -->
+    <bean id="wmsB2cExceptionDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="${wms.b2c.exception.queue}"/>
+    </bean>
+
+    <!--性能检测队列-->
+    <bean id="performanceToolDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="Wms_RF_REQUEST_REPLY"/>
+    </bean>
+</beans>

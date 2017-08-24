@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- MQ重试策略 -->
+    <bean id="wmsRedeliveryPolicy" class="org.apache.activemq.RedeliveryPolicy">
+        <property name="maximumRedeliveries" value="${wms.mq.retry}"/>
+        <property name="maximumRedeliveryDelay" value="3000"/>
+    </bean>
+
+    <!-- MQ factory -->
+    <bean id="wmsActivemqFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="${wms.mq.url}"/>
+        <property name="redeliveryPolicy" ref="wmsRedeliveryPolicy"/>
+    </bean>
+    <!-- MQ 连接池  -->
+    <bean id="mqConnectionPoolFactory" class="org.apache.activemq.pool.PooledConnectionFactory"
+          destroy-method="stop">
+        <property name="connectionFactory" ref="wmsActivemqFactory"/>
+    </bean>
+    <!-- 线程池 -->
+    <bean id="myRegisterMessageExecutor"
+          class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="${wms.threadPool.corePoolSize}"/>
+        <property name="maxPoolSize" value="${wms.threadPool.maxPoolSize}"/>
+        <property name="daemon" value="true"/>
+        <property name="keepAliveSeconds" value="120"/>
+    </bean>
+    <!-- 配置JMS模板（Queue），Spring提供的JMS工具类，它发送、接收消息。 -->
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="mqConnectionPoolFactory"/>
+        <property name="receiveTimeout" value="10000"/>
+    </bean>
+
+    <!--队列-->
+    <import resource="classpath:mq/activemq-producer.xml"/>
+    <import resource="classpath:mq/activemq-consumer.xml"/>
+</beans>

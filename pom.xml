@@ -86,6 +86,7 @@
         <commons-fileupload-version>1.2.2</commons-fileupload-version>
         <commons-io-version>2.0.1</commons-io-version>
         <fasterxml-version>2.5.1</fasterxml-version>
+        <activemq-version>5.8.0</activemq-version>
     </properties>
 
 
