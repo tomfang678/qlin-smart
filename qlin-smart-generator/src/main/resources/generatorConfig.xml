@@ -14,14 +14,15 @@
                         connectionURL="jdbc:oracle:thin:@192.168.149.114:1521:MBTESTDB" userId="MAWMS"
                         password="mawms"/>-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        url="jdbc\:mysql\://localhost\:3306/smartdb?allowMultiQueries\=true&amp;useUnicode\=true&amp;characterEncoding\=UTF-8"
-                        userId="root" password="123"/>
-        <javaModelGenerator targetPackage="com.qlin.smart.bean" targetProject="src/main/java">
+                        connectionURL="jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;useUnicode=true"
+                        userId="root" password="123" />
+
+        <javaModelGenerator targetPackage="com.qlin.smart.auto.bean" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.qlin.smart.dao.mapper" targetProject="src/main/java">
+        <sqlMapGenerator targetPackage="com.qlin.smart.dao.auto.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 

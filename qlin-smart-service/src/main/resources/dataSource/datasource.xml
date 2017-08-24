@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="localDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="${local.driverClassName}" />
+        <property name="url"     value="${local.url}" />
+        <property name="username" value="${local.userName}" />
+        <property name="password" value="${local.password}" />
+        <property name="initialSize" value="${local.initialPoolSize}" />
+        <property name="minIdle" value="${local.minPoolSize}" />
+        <property name="maxTotal" value="${local.maxPoolSize}" />
+        <property name="poolPreparedStatements" value="true"/>
+        <property name="maxOpenPreparedStatements" value="100"/>
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+        <property name="minEvictableIdleTimeMillis" value="600000" />
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+        <property name="removeAbandonedOnMaintenance" value="true" />
+        <property name="removeAbandonedOnBorrow" value="true" />
+        <property name="removeAbandonedTimeout" value="850" />
+        <property name="logAbandoned" value="true" />
+        <property name="validationQuery" value="SELECT 1" />
+    </bean>
+</beans>

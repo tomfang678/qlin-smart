@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qlin.smart.dao.IGoodsMapper">
+    <resultMap id="BaseResultMap" type="com.qlin.smart.bean.Goods">
+        <id column="ID" jdbcType="INTEGER" property="id"/>
+        <result column="intnlCode" jdbcType="VARCHAR" property="intnlCode"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="productDate" jdbcType="TIMESTAMP" property="productDate"/>
+        <result column="author" jdbcType="VARCHAR" property="author"/>
+        <result column="createDate" jdbcType="TIMESTAMP" property="createDate"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    ID, intnlCode, name, remark, productDate, author, createDate
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from goods
+        where ID = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from goods
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.qlin.smart.bean.Goods">
+    insert into goods (ID, intnlCode, name, 
+      remark, productDate, author, 
+      createDate)
+    values (#{id,jdbcType=INTEGER}, #{intnlCode,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{productDate,jdbcType=TIMESTAMP}, #{author,jdbcType=VARCHAR}, 
+      #{createDate,jdbcType=TIMESTAMP})
+  </insert>
+    <insert id="insertSelective" parameterType="com.qlin.smart.bean.Goods">
+        insert into goods
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                ID,
+            </if>
+            <if test="intnlCode != null">
+                intnlCode,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="productDate != null">
+                productDate,
+            </if>
+            <if test="author != null">
+                author,
+            </if>
+            <if test="createDate != null">
+                createDate,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="intnlCode != null">
+                #{intnlCode,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="productDate != null">
+                #{productDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="author != null">
+                #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.qlin.smart.bean.Goods">
+        update goods
+        <set>
+            <if test="intnlCode != null">
+                intnlCode = #{intnlCode,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="productDate != null">
+                productDate = #{productDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="author != null">
+                author = #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                createDate = #{createDate,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.qlin.smart.bean.Goods">
+    update goods
+    set intnlCode = #{intnlCode,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      productDate = #{productDate,jdbcType=TIMESTAMP},
+      author = #{author,jdbcType=VARCHAR},
+      createDate = #{createDate,jdbcType=TIMESTAMP}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

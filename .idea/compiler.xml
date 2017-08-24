@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="qlin-smart-api" />
+        <module name="qlin-smart-base-dao" />
         <module name="qlin-smart-bean" />
         <module name="qlin-smart-common" />
         <module name="qlin-smart-dao" />
@@ -19,6 +20,7 @@
     <bytecodeTargetLevel>
       <module name="qlin-smart" target="1.7" />
       <module name="qlin-smart-api" target="1.7" />
+      <module name="qlin-smart-base-dao" target="1.7" />
       <module name="qlin-smart-bean" target="1.7" />
       <module name="qlin-smart-common" target="1.7" />
       <module name="qlin-smart-dao" target="1.7" />

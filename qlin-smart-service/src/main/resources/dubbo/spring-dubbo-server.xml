@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+    <!-- 服务注册中心 -->
+    <dubbo:application name="${dubbo.application.name}"/>
+    <dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}" id="qlinsmartZookeeper"/>
+    <dubbo:provider timeout="${dubbo.server.timeout}" protocol="dubbo" port="${dubbo.protocol.port}"
+                    threads="500" payload="${dubbo.protocol.maxPayLoad}" registry="qlinsmartZookeeper" id="qlinsmartProvider"/>
+
+    <dubbo:service group="${dubbo.group.}" interface="com.qlin.smart.api.IGoods"
+                   ref="goodsService" provider="wmsBpmsProvider"/>
+
+
+</beans>

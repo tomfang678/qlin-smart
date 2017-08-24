@@ -2,7 +2,7 @@ package com.qlin.smart.bean;
 
 import java.util.Date;
 
-public class Good extends BaseBean {
+public class Goods extends BaseBean {
     private String intnlCode;
     private String name;
     private String remark;

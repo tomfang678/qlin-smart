@@ -17,6 +17,7 @@
         <module>qlin-smart-bean</module>
         <module>qlin-smart-common</module>
         <module>qlin-smart-generator</module>
+        <module>qlin-smart-base-dao</module>
     </modules>
     <distributionManagement>
         <repository>

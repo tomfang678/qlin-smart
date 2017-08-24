@@ -10,6 +10,40 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>qlin-smart-dao</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.qlin.smart</groupId>
+            <artifactId>qlin-smart-bean</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.qlin.smart</groupId>
+            <artifactId>qlin-smart-bean</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.qlin.smart</groupId>
+            <artifactId>qlin-smart-base-dao</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--外部依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>

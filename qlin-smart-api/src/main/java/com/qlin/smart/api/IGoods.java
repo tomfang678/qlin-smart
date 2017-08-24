@@ -1,11 +1,13 @@
 package com.qlin.smart.api;
 
-import com.qlin.smart.bean.Good;
+import com.qlin.smart.bean.Goods;
 
 import java.util.List;
 
 public interface IGoods {
-    Good getGood(Integer id);
+    Goods getGood(Integer id);
 
-    List<Good> getList();
+    List<Goods> getList();
+
+    Integer addGoods(Goods goods);
 }
