@@ -25,8 +25,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="qlin-smart-service" />
-    <orderEntry type="module" module-name="qlin-smart-dao" />
     <orderEntry type="module" module-name="qlin-smart-base-dao" />
+    <orderEntry type="module" module-name="qlin-smart-dao" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:20.0" level="project" />
     <orderEntry type="module" module-name="qlin-smart-api" />
     <orderEntry type="module" module-name="qlin-smart-bean" />

@@ -10,11 +10,11 @@
           <element id="archive" name="qlin-smart-service-1.0-SNAPSHOT.jar">
             <element id="module-output" name="qlin-smart-service" />
           </element>
-          <element id="archive" name="qlin-smart-dao-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="qlin-smart-dao" />
-          </element>
           <element id="archive" name="qlin-smart-base-dao-1.0-SNAPSHOT.jar">
             <element id="module-output" name="qlin-smart-base-dao" />
+          </element>
+          <element id="archive" name="qlin-smart-dao-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="qlin-smart-dao" />
           </element>
           <element id="library" level="project" name="Maven: com.google.guava:guava:20.0" />
           <element id="archive" name="qlin-smart-api-1.0-SNAPSHOT.jar">

@@ -57,8 +57,8 @@
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.2.2" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.0.1" level="project" />
     <orderEntry type="module" module-name="qlin-smart-bean" />
-    <orderEntry type="module" module-name="qlin-smart-dao" />
     <orderEntry type="module" module-name="qlin-smart-base-dao" />
+    <orderEntry type="module" module-name="qlin-smart-dao" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:20.0" level="project" />
     <orderEntry type="module" module-name="qlin-smart-api" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />

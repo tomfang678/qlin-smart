@@ -30,9 +30,9 @@ public class goodsTest {
     @Test
     public void getOneTest() {
         Goods goods = new Goods();
-        goods.setId(1);
-        goods.setIntnlCode("123");
-        goods.setName("测试");
+        goods.setId(5);
+        goods.setIntnlCode("555");
+        goods.setName("测试2");
         goods.setProductDate(new Date());
         goods.setRemark("test");
         goods.setAuthor("tom");

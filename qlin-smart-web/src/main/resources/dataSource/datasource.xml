@@ -26,7 +26,7 @@
         <property name="validationQuery" value="SELECT 1"/>
     </bean>
 
-    <bean name="readDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+    <!--<bean name="readDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
         <property name="driverClassName" value="${local.driverClassName}"/>
         <property name="url" value="${local.url}"/>
         <property name="username" value="${local.userName}"/>
@@ -46,6 +46,6 @@
         <property name="removeAbandonedTimeout" value="850"/>
         <property name="logAbandoned" value="true"/>
         <property name="validationQuery" value="SELECT 1"/>
-    </bean>
+    </bean>-->
 
 </beans>
