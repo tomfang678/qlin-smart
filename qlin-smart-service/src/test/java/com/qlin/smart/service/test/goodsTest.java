@@ -30,7 +30,7 @@ public class goodsTest {
     @Test
     public void getOneTest() {
         Goods goods = new Goods();
-        goods.setId(5);
+        goods.setId(6);
         goods.setIntnlCode("555");
         goods.setName("测试2");
         goods.setProductDate(new Date());

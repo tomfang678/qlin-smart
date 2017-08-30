@@ -1,5 +1,7 @@
 package qlin.smart.base.dao;
 
+import com.qlin.smart.bean.SearchBean;
+
 import java.util.List;
 
 /**
@@ -9,24 +11,103 @@ import java.util.List;
  */
 public interface IBaseDao<T> {
 
-    int deleteByPrimaryKey(Object id);
+    /**
+     * 根据ID删除指定项
+     *
+     * @param
+     * @return
+     */
+    int deleteByPrimaryKey(Object id) throws Exception;
 
-    int insert(T record);
+    /**
+     * 批量删除
+     *
+     * @param
+     * @return
+     */
+    int deleteByBatch(List<Object> list) throws Exception;
 
-    int insertSelective(T t);
+    /**
+     * 新增
+     *
+     * @param
+     * @return
+     */
+    int insert(T record) throws Exception;
 
-    int insertByBatch(List<T> t);
+    /**
+     * 选择插入
+     *
+     * @param
+     * @return
+     */
+    int insertSelective(T t) throws Exception;
 
-    int insertByBatch(List<T> t, String SqlName);
+    /**
+     * 批量插入
+     *
+     * @param
+     * @return
+     */
+    int insertByBatch(List<T> t) throws Exception;
 
-    T selectByPrimaryKey(Object id);
+    /**
+     * 批量插入
+     *
+     * @param
+     * @return
+     */
+    int insertByBatch(List<T> t, String SqlName) throws Exception;
 
-    int updateByPrimaryKeySelective(T t);
+    /**
+     * 选择指定项
+     *
+     * @param
+     * @return
+     */
+    T selectByPrimaryKey(Object id) throws Exception;
 
-    int updateByPrimaryKey(T t);
+    /**
+     * 选择更新
+     *
+     * @param
+     * @return
+     */
+    int updateByPrimaryKeySelective(T t) throws Exception;
 
-    int updateByBatch(List<T> t);
+    /**
+     * 更新
+     *
+     * @param
+     * @return
+     */
+    int updateByPrimaryKey(T t) throws Exception;
 
-    int updateByBatch(List<T> t, String SqlName);
+    /**
+     * 批量更新
+     *
+     * @param
+     * @return
+     */
+    int updateByBatch(List<T> t) throws Exception;
+
+    /**
+     * 批量更新
+     *
+     * @param
+     * @return
+     */
+    int updateByBatch(List<T> t, String SqlName) throws Exception;
+
+    /**
+     * 功能：获取分页数据
+     */
+    List<T> selectByConditions(SearchBean searchBean) throws Exception;
+
+    /**
+     * 功能：获取总条数
+     */
+    int selectTotalByConditions(SearchBean searchBean) throws Exception;
+
 
 }
