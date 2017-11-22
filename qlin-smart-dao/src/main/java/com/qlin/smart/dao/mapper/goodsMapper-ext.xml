@@ -13,7 +13,7 @@
         ) a
         where <![CDATA[ a.rn >= #{start,jdbcType=NUMERIC} ]]>
     </select>
-    <select id="selectTotalByConditions" parameterType="com.qlin.smart.bean.SearchBean"
+       <select id="selectTotalByConditions" parameterType="com.qlin.smart.bean.SearchBean"
             resultType="int">
         select count(1)
         from goods

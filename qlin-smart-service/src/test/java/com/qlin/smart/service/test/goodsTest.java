@@ -29,17 +29,22 @@ public class goodsTest {
 
     @Test
     public void getOneTest() {
-        Goods goods = new Goods();
-        goods.setId(6);
-        goods.setIntnlCode("555");
-        goods.setName("测试2");
-        goods.setProductDate(new Date());
-        goods.setRemark("test");
-        goods.setAuthor("tom");
-        goods.setCreateDate(new Date());
-        Integer result = goodsMapper.insert(goods);
-        Assert.assertEquals(1, (long) result);
-        goods = iGoods.getGood(1);
-        Assert.assertEquals("123", goods.getIntnlCode());
+        try {
+            Goods goods = new Goods();
+            goods.setId(6);
+            goods.setIntnlCode("555");
+            goods.setName("测试2");
+            goods.setProductDate(new Date());
+            goods.setRemark("test");
+            goods.setAuthor("tom");
+            goods.setCreateDate(new Date());
+            Integer result = goodsMapper.insert(goods);
+            Assert.assertEquals(1, (long) result);
+            goods = iGoods.getGood(1);
+            Assert.assertEquals("123", goods.getIntnlCode());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
