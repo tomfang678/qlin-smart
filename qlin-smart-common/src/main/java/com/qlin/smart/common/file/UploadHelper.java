@@ -1,9 +1,10 @@
 /**
  * �ϴ��ļ���
  */
-package com.qlin.smart.common;
+package com.qlin.smart.common.file;
 
 
+import com.qlin.smart.common.ThumbnailGenerator;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

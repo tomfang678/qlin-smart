@@ -21,7 +21,12 @@ public class GoodsService implements IGoods {
 
     @Override
     public Goods getGood(Integer id) {
-        return goodsDaoImpl.selectByPrimaryKey(id);
+        try {
+            return goodsDaoImpl.selectByPrimaryKey(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override
@@ -31,6 +36,11 @@ public class GoodsService implements IGoods {
 
     @Override
     public Integer addGoods(Goods goods) {
-        return goodsDaoImpl.insert(goods);
+        try {
+            return goodsDaoImpl.insert(goods);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

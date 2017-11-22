@@ -1,4 +1,4 @@
-package com.qlin.smart.common;
+package com.qlin.smart.common.xml;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -7,7 +7,7 @@ import javax.xml.bind.Unmarshaller;
 import java.io.*;
 
 /**
- * 作者：fangbin
+ * 作者：tomfng
  * 日期：2017-04-06
  * 描述：xml转string,string转xml对象公共类
  */

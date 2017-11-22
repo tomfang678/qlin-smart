@@ -10,13 +10,12 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
 
-        <!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
-                        connectionURL="jdbc:oracle:thin:@192.168.149.114:1521:MBTESTDB" userId="MAWMS"
-                        password="mawms"/>-->
+       <!-- <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+                        connectionURL="jdbc:oracle:thin:@10.100.20.151:1521:MBOLTPGG" userId="mtsbw"
+                        password="solaris01"/>-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;useUnicode=true"
                         userId="root" password="123" />
-
         <javaModelGenerator targetPackage="com.qlin.smart.auto.bean" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
@@ -27,7 +26,7 @@
         </sqlMapGenerator>
 
 
-        <table tableName="goods"
+        <table tableName="wms_dyrpt_mainsql"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">

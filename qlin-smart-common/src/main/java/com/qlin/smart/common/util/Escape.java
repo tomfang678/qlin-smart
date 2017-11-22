@@ -1,4 +1,4 @@
-package com.qlin.smart.common;
+package com.qlin.smart.common.util;
 
 public class Escape {
 	private final static String[] hex = { "00", "01", "02", "03", "04", "05",

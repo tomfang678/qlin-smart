@@ -1,4 +1,4 @@
-package com.qlin.smart.common;
+package com.qlin.smart.common.util;
 
 /**
  * <p>Title: 时间和日期的工具类</p>

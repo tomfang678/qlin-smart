@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.qlin.smart.common;
+package com.qlin.smart.common.xml;
 
 import org.dom4j.*;
 import org.dom4j.io.OutputFormat;

@@ -11,7 +11,6 @@
         <module name="qlin-smart-bean" />
         <module name="qlin-smart-common" />
         <module name="qlin-smart-dao" />
-        <module name="qlin-smart-generator" />
         <module name="qlin-smart-server" />
         <module name="qlin-smart-service" />
         <module name="qlin-smart-web" />

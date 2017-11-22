@@ -1,4 +1,4 @@
-package com.qlin.smart.common;
+package com.qlin.smart.common.file;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;

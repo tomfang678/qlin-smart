@@ -1,4 +1,4 @@
-package com.qlin.smart.common;
+package com.qlin.smart.common.file;
 
 import java.io.InputStream;
 import java.util.Enumeration;

@@ -1,4 +1,4 @@
-package com.qlin.smart.common;
+package com.qlin.smart.common.secret;
 
 // Md5.java
 // $Id: Md5.java,v 1.4 1999/12/06 13:13:58 ylafon Exp $

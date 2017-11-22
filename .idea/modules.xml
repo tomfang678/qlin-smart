@@ -8,7 +8,6 @@
       <module fileurl="file://$PROJECT_DIR$/qlin-smart-bean/qlin-smart-bean.iml" filepath="$PROJECT_DIR$/qlin-smart-bean/qlin-smart-bean.iml" />
       <module fileurl="file://$PROJECT_DIR$/qlin-smart-common/qlin-smart-common.iml" filepath="$PROJECT_DIR$/qlin-smart-common/qlin-smart-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/qlin-smart-dao/qlin-smart-dao.iml" filepath="$PROJECT_DIR$/qlin-smart-dao/qlin-smart-dao.iml" />
-      <module fileurl="file://$PROJECT_DIR$/qlin-smart-generator/qlin-smart-generator.iml" filepath="$PROJECT_DIR$/qlin-smart-generator/qlin-smart-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/qlin-smart-server/qlin-smart-server.iml" filepath="$PROJECT_DIR$/qlin-smart-server/qlin-smart-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/qlin-smart-service/qlin-smart-service.iml" filepath="$PROJECT_DIR$/qlin-smart-service/qlin-smart-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/qlin-smart-web/qlin-smart-web.iml" filepath="$PROJECT_DIR$/qlin-smart-web/qlin-smart-web.iml" />

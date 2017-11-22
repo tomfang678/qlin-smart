@@ -1,4 +1,4 @@
-package com.qlin.smart.common;
+package com.qlin.smart.common.util;
 
 /*
  * Static String formatting and query routines.

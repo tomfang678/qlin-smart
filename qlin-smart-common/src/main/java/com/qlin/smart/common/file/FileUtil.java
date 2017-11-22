@@ -1,6 +1,7 @@
-package com.qlin.smart.common;
+package com.qlin.smart.common.file;
 
-import javax.swing.filechooser.FileFilter;
+import com.qlin.smart.common.file.MyFileFilter;
+
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;

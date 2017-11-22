@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.qlin.smart.common;
+package com.qlin.smart.common.secret;
 
 /*
  * Base64 encoding and decoding.
@@ -20,6 +20,8 @@ package com.qlin.smart.common;
  *
  * See COPYING.TXT for details.
  */
+
+import com.qlin.smart.common.file.FileHelper;
 
 import java.io.*;
 import java.text.MessageFormat;
@@ -774,7 +776,7 @@ public class Base64 {
      *
      * @param fIn File to be decoded (will be overwritten).
      * @throws IOException             if an IO error occurs.
-     * @throws Base64DecodingException if unexpected data is encountered.
+     * @throws MD5Encrypt.Base64DecodingException if unexpected data is encountered.
      * @since ostermillerutils 1.00.00
      */
     public static void decode(File fIn) throws IOException {
@@ -790,7 +792,7 @@ public class Base64 {
      * @param fIn             File to be decoded (will be overwritten).
      * @param throwExceptions Whether to throw exceptions when unexpected data is encountered.
      * @throws IOException             if an IO error occurs.
-     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
+     * @throws MD5Encrypt.Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
      * @since ostermillerutils 1.00.00
      */
     public static void decode(File fIn, boolean throwExceptions) throws IOException {
@@ -806,7 +808,7 @@ public class Base64 {
      * @param fIn  File to be decoded.
      * @param fOut File to which the results should be written (may be the same as fIn).
      * @throws IOException             if an IO error occurs.
-     * @throws Base64DecodingException if unexpected data is encountered.
+     * @throws MD5Encrypt.Base64DecodingException if unexpected data is encountered.
      * @since ostermillerutils 1.00.00
      */
     public static void decode(File fIn, File fOut) throws IOException {
@@ -823,7 +825,7 @@ public class Base64 {
      * @param fOut            File to which the results should be written (may be the same as fIn).
      * @param throwExceptions Whether to throw exceptions when unexpected data is encountered.
      * @throws IOException             if an IO error occurs.
-     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
+     * @throws MD5Encrypt.Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
      * @since ostermillerutils 1.00.00
      */
     public static void decode(File fIn, File fOut, boolean throwExceptions) throws IOException {
@@ -870,7 +872,7 @@ public class Base64 {
      * @param throwExceptions Throw an exception if an unexpected character is encountered.
      * @return the next Base64 character from the stream or -1 if there are no more Base64 characters on the stream.
      * @throws IOException             if an IO Error occurs.
-     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
+     * @throws MD5Encrypt.Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
      * @since ostermillerutils 1.00.00
      */
     private static final int readBase64(InputStream in, boolean throwExceptions) throws IOException {
@@ -881,7 +883,7 @@ public class Base64 {
             if (read == END_OF_INPUT) return END_OF_INPUT;
             read = reverseBase64Chars[(byte) read];
             if (throwExceptions && (read == NON_BASE_64 || (numPadding > 0 && read > NON_BASE_64))) {
-                throw new Base64DecodingException(
+                throw new MD5Encrypt.Base64DecodingException(
                         MessageFormat.format(
                                 labels.getString("unexpectedchar"),
                                 (Object[]) new String[]{
@@ -955,7 +957,7 @@ public class Base64 {
      * @param in  Stream from which to read data that needs to be decoded.
      * @param out Stream to which to write decoded data.
      * @throws IOException             if an IO error occurs.
-     * @throws Base64DecodingException if unexpected data is encountered.
+     * @throws MD5Encrypt.Base64DecodingException if unexpected data is encountered.
      * @since ostermillerutils 1.00.00
      */
     public static void decode(InputStream in, OutputStream out) throws IOException {
@@ -972,7 +974,7 @@ public class Base64 {
      * @param out             Stream to which to write decoded data.
      * @param throwExceptions Whether to throw exceptions when unexpected data is encountered.
      * @throws IOException             if an IO error occurs.
-     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
+     * @throws MD5Encrypt.Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
      * @since ostermillerutils 1.00.00
      */
     public static void decode(InputStream in, OutputStream out, boolean throwExceptions) throws IOException {
