@@ -4,7 +4,7 @@
 package com.qlin.smart.common;
 
 /**
- * @author advance
+ * @author
  *
  */
 import java.awt.Color;
